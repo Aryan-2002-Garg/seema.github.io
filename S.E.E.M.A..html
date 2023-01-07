@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="scroll-smooth h-full overflow-y-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The Play CDN is designed for development purposes only, and is not the best choice for production. -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+  <link id="heading-font" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" media="all" />
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    h1 *,
+    h2 *,
+    h3 *,
+    h4 *,
+    h5 *,
+    h6 * {
+      font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  </style>
+  <script>
+    window.tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "fontFamily": {
+          "heading": ["DM Sans", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "\"Segoe UI\"", "Roboto", "\"Helvetica Neue\"", "Arial", "\"Noto Sans\"", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""],
+          "body": ["DM Sans", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "\"Segoe UI\"", "Roboto", "\"Helvetica Neue\"", "Arial", "\"Noto Sans\"", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+        },
+        "extend": {
+          "borderRadius": {
+            "global": "5px"
+          },
+          "colors": {
+            "primary": {
+              "50": "#f8f5ff",
+              "100": "#eee6fe",
+              "200": "#ddcefd",
+              "300": "#c1a6fc",
+              "400": "#844df9",
+              "500": "#4d07e4",
+              "600": "#3705a3",
+              "700": "#280477",
+              "800": "#170245",
+              "900": "#0c0123",
+              "950": "#070114",
+              "DEFAULT": "#570df8"
+            },
+            "secondary": {
+              "50": "#fff5fd",
+              "100": "#ffe6f9",
+              "200": "#fecdf3",
+              "300": "#fea4e9",
+              "400": "#fd49d3",
+              "500": "#e802b3",
+              "600": "#a70280",
+              "700": "#79015d",
+              "800": "#470136",
+              "900": "#23001b",
+              "950": "#140010",
+              "DEFAULT": "#f002b8"
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+</head>
+
+<body class='font-body antialiased h-full font-body antialiased text-[#000000] bg-[#fcfcfc] dark:text-[#ffffff] dark:bg-[#031022]'>
+  <div class="pb-6 sm:pb-8 lg:pb-12">
+    <div class="static max-w-screen-2xl px-4 mx-auto md:px-8">
+      <header class="flex justify-between items-center py-4 md:mb-12 md:py-3 xl:mb-16"><a class="inline-flex items-center text-black-800 font-bold gap-2.5 text-xl md:text-2xl" href="#"><span class="w-6 h-auto text-primary xl:w-10">
+            <div style="font-size:inherit;color:inherit;padding:2px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+              </svg></div>
+          </span><span class=""> S.E.E.M.A.</span></a>
+        <nav class="relative hidden gap-12 lg:flex"><a class="text-lg font-semibold text-primary lg:font-medium lg:text-base" href="#">Home</a><a class="hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100 lg:text-base lg:font-normal" href="#">Pricing</a><a class="hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100 lg:text-base lg:font-normal" href="#">About</a></nav><button id="gwqpBn" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"><span class="h-6 w-6"><svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg></span><span class=""> Menu </span></button>
+      </header>
+      <div class="relative px-4 mx-auto pt-[64px] sm:max-w-xl md:px-8 md:max-w-full lg:py-32 lg:pt-[25px] xl:px-20">
+        <div class="max-w-xl mx-auto lg:max-w-screen-xl">
+          <div class="mb-16 lg:max-w-lg lg:mb-0">
+            <div class="max-w-xl mb-6">
+              <div class="" style="background-image:url(&quot;https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.prysmiangroup.com%2Fen%2Finsight%2Finnovation%2Fsolar-energy-how-does-it-work-is-it-renewable&amp;psig=AOvVaw1A6HuwXeSZDh2YcuHVgtL7&amp;ust=1673106077071000&amp;source=images&amp;cd=vfe&amp;ved=0CBAQjRxqFwoTCJDBx_6js_wCFQAAAAAdAAAAABAF&quot;)">
+                <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400"> Solar energy equity management application </p>
+              </div>
+              <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">Go Solar with Us..</h2>
+              <p class="text-base text-gray-700 md:text-lg">Seema aims to track , regulate  and ensure equitable distribution of generated renewable electricity.
+
+                India is densely populated country with major electricity consumers associated with apartments , slums and agriculture. Due to unavability of open lands for solar installation only a few people reaps the benifits. </p>
+            </div>
+            <div class="flex items-center"><a class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bg-primary-500 rounded-global" href="https://thirdweb.com/mumbai/0xE9B1B97509A0048A3a40cdC1069301F9940579a3/events"> CONNECT WALLET </a></div>
+          </div>
+        </div>
+        <div class="flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end" style="background-image:url(&quot;https://cdn.pixabay.com/photo/2014/10/16/21/16/photovoltaic-491702_960_720.jpg&quot;)"><img class="object-cover object-top w-full h-64 max-w-xl -mb-16 rounded shadow-2xl lg:ml-64 xl:ml-8 lg:-mb-24 xl:-mb-28 lg:h-auto lg:max-w-screen-md" alt="No alt" src="https://unsplash.com/photos/WvusC5M-TM8" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-16 text-gray-700 2xl:py-24 dark:bg-gray-800 dark:text-gray-200">
+    <div class="px-4 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="mb-4 font-bold tracking-tight text-3xl lg:text-4xl">Services</h1>
+      </div>
+      <div class="grid gap-x-6 gap-y-12 mb-6 mt-10 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 lg:gap-x-8">
+        <div class="flex flex-col space-y-4">
+          <div class="flex flex-col border gap-4 p-4 pt-6 rounded-global">
+            <h3 class="text-gray-800 text-2xl font-semibold text-center">Incentives</h3>
+            <div class="flex justify-center items-end gap-1"></div><a class="block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm font-semibold text-center outline-none transition duration-100 px-8 py-3 rounded-global md:text-base" href="https://thirdweb.com/mumbai/0xa9260e732a86d1d4F7A4b05B05c526cB71cc4959">Select</a>
+          </div>
+          <div class="flex-1 bg-gray-100 space-y-3 px-4 py-6 rounded-global">
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">On chain energy tracking </span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Provision of URJA tokens on Energy Yield</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Email and phone support</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Comunity support</span></div>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <div class="flex flex-col border relative gap-4 p-4 pt-6 rounded-global border-primary">
+            <div class="flex justify-center absolute -top-3 inset-x-0"></div>
+            <h3 class="text-gray-800 text-2xl font-semibold text-center">Equity Distribution</h3>
+            <div class="flex justify-center items-end gap-1"></div><a class="block hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm font-semibold text-center outline-none transition duration-100 px-8 py-3 rounded-global bg-primary md:text-base" href="https://thirdweb.com/mumbai/0xE9B1B97509A0048A3a40cdC1069301F9940579a3">Select</a>
+          </div>
+          <div class="flex-1 bg-gray-100 space-y-3 px-4 py-6 rounded-global">
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">On chain energy distribution </span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Capacitate investment</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Increases Scalability and Adaptability</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Email and phone support</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Community support</span></div>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <div class="flex flex-col border gap-4 p-4 pt-6 rounded-global">
+            <h3 class="text-gray-800 text-2xl font-semibold text-center">Energy Trading </h3>
+            <div class="flex justify-center items-end gap-1"></div><a class="block bg-gray-800 hover:bg-gray-700 active:bg-gray-600 focus-visible:ring ring-indigo-300 text-white text-sm font-semibold text-center outline-none transition duration-100 px-8 py-3 rounded-global md:text-base" href="https://thirdweb.com/mumbai/0x2Bd58079f62B408bC4e77222F12c456abc8400F0">Select</a>
+          </div>
+          <div class="flex-1 bg-gray-100 space-y-3 px-4 py-6 rounded-global">
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">decentralized power hosting </span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Peer to Peer transfer </span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">According to your buying capacity</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Email and phone support</span></div>
+            <div class="flex gap-2"><span class="w-6 h-6 shrink-0 text-indigo-500"><svg class="w-6 h-6 shrink-0 text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></span><span class="text-gray-600">Community support</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><img class="" alt="" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.prysmiangroup.com%2Fen%2Finsight%2Finnovation%2Fsolar-energy-how-does-it-work-is-it-renewable&amp;psig=AOvVaw1A6HuwXeSZDh2YcuHVgtL7&amp;ust=1673106077071000&amp;source=images&amp;cd=vfe&amp;ved=0CBAQjRxqFwoTCJDBx_6js_wCFQAAAAAdAAAAABAF" />
+  <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 50,
+      duration: 800
+    });
+  </script>
+
+
+</body>
+
+</html>
